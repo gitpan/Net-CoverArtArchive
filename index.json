@@ -1,0 +1,38 @@
+{
+	"images" : [
+		{
+		    "types" : [ "Front" ],
+		    "front" : true,
+		    "back" : false,
+		    "comment" : "",
+		    "order" : 1,
+		    "image" : "http://coverartarchive.org/release/1735e086-462e-42c3-b615-eebbd5e9f352/188401932.jpg",
+		    "thumbnails" : {
+			"small" : "http://coverartarchive.org/release/1735e086-462e-42c3-b615-eebbd5e9f352/188401932-250.jpg",
+			"large" : "http://coverartarchive.org/release/1735e086-462e-42c3-b615-eebbd5e9f352/188401932-500.jpg"
+		    },
+		    "approved" : true,
+		    "edit" : "http://musicbrainz.org/edit/0"
+		},
+		{
+		    "types" : [ "Back" ],
+		    "front" : false,
+		    "back" : true,
+		    "comment" : "",
+		    "order" : 2,
+		    "image" : "http://coverartarchive.org/release/1735e086-462e-42c3-b615-eebbd5e9f352/188430157.jpg",
+		    "thumbnails" : {
+				"small" : "http://coverartarchive.org/release/1735e086-462e-42c3-b615-eebbd5e9f352/188430157-250.jpg",
+				"large" : "http://coverartarchive.org/release/1735e086-462e-42c3-b615-eebbd5e9f352/188430157-500.jpg"
+		    },
+		    "approved" : true,
+		    "edit" : "http://musicbrainz.org/edit/0"
+		}
+	],
+	"release" : {
+		"title" : "Nagios Check Release",
+		"artist" : "MusicBrainz Test Artist",
+		"barcode" : null,
+		"catalognumbers": [ ]
+	}
+}
