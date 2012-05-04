@@ -1,25 +1,20 @@
 ---
-abstract: 'Bindings to www.coverartarchive.org'
+abstract: 'Query the coverartarchive.org'
 author:
-  - 'MetaBrainz Foundation'
-build_requires:
-  ExtUtils::MakeMaker: 6.36
+  - 'Oliver Charles <oliver@musicbrainz.org>'
+build_requires: {}
 configure_requires:
-  ExtUtils::MakeMaker: 6.36
-distribution_type: module
-dynamic_config: 1
-generated_by: 'Module::Install version 1.06'
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300007, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Net-CoverArtArchive
-no_index:
-  directory:
-    - inc
 requires:
-  LWP::UserAgent: 0
-  Moose: 0
-resources:
-  license: http://dev.perl.org/licenses/
-version: 0.99-TRIAL
+  JSON::Any: 1.29
+  LWP::UserAgent: 6.03
+  Moose: 2.0402
+  namespace::autoclean: 0.13
+version: 1.00

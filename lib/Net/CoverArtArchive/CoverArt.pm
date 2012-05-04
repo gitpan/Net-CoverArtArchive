@@ -1,4 +1,6 @@
 package Net::CoverArtArchive::CoverArt;
+# ABSTRACT: A single cover art image
+
 use Moose;
 use namespace::autoclean;
 
@@ -64,3 +66,73 @@ has edit => (
 
 __PACKAGE__->meta->make_immutable;
 1;
+
+
+__END__
+=pod
+
+=encoding utf-8
+
+=head1 NAME
+
+Net::CoverArtArchive::CoverArt - A single cover art image
+
+=head1 ATTRIBUTES
+
+=head2 id
+
+The ID of this cover art. Fairly internal, you probably don't need to do
+anything with this.
+
+=head2 types
+
+An array reference of strings, where each string describes the type of this
+image. For example, an image might be about a specific medium, or it might be a
+page in a booklet.
+
+=head2 is_front
+
+Whether this image is considered to be the 'frontiest' image of a release.
+
+=head2 is_back
+
+Whether this image is considered to be the 'backiest' image of a release.
+
+=head2 comment
+
+A string potentially describing additionally information about this image. Free
+text and unstructured.
+
+=head2 image
+
+The full URL of the image
+
+=head2 large_thumbnail
+
+A URL to the large thumbnail of this image.
+
+=head2 small_thumbnail
+
+A URL to the small thumbnail of this image.
+
+=head2 approved
+
+Whether this image has passed peer review.
+
+=head2 edit
+
+A URL to the MusicBrainz edit that originally added this piece of artwork.
+
+=head1 AUTHOR
+
+Oliver Charles <oliver@musicbrainz.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by Oliver Charles <oliver@musicbrainz.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+

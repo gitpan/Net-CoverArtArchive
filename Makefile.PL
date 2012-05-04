@@ -1,14 +1,54 @@
-use 5.10.0;
 
-use inc::Module::Install;
+use strict;
+use warnings;
 
-name 'Net-CoverArtArchive';
-abstract 'Bindings to www.coverartarchive.org';
-author 'MetaBrainz Foundation';
-license 'perl';
-version_from 'lib/Net/CoverArtArchive.pm';
 
-requires 'LWP::UserAgent';
-requires 'Moose';
 
-WriteAll;
+use ExtUtils::MakeMaker 6.30;
+
+
+
+my %WriteMakefileArgs = (
+  "ABSTRACT" => "Query the coverartarchive.org",
+  "AUTHOR" => "Oliver Charles <oliver\@musicbrainz.org>",
+  "BUILD_REQUIRES" => {},
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
+  },
+  "DISTNAME" => "Net-CoverArtArchive",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Net::CoverArtArchive",
+  "PREREQ_PM" => {
+    "JSON::Any" => "1.29",
+    "LWP::UserAgent" => "6.03",
+    "Moose" => "2.0402",
+    "namespace::autoclean" => "0.13"
+  },
+  "VERSION" => "1.00",
+  "test" => {
+    "TESTS" => ""
+  }
+);
+
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
+  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
+  my $pp = $WriteMakefileArgs{PREREQ_PM};
+  for my $mod ( keys %$br ) {
+    if ( exists $pp->{$mod} ) {
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
+    }
+    else {
+      $pp->{$mod} = $br->{$mod};
+    }
+  }
+}
+
+delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
+
+WriteMakefile(%WriteMakefileArgs);
+
+
+
