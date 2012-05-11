@@ -10,8 +10,12 @@ use ExtUtils::MakeMaker 6.30;
 
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Query the coverartarchive.org",
-  "AUTHOR" => "Oliver Charles <oliver\@musicbrainz.org>",
-  "BUILD_REQUIRES" => {},
+  "AUTHOR" => "Oliver Charles <oliver\@musicbrainz.org>, Brian Cassidy <bricas\@cpan.org>",
+  "BUILD_REQUIRES" => {
+    "File::Find::Rule" => "0.33",
+    "Test::More" => "0.90",
+    "Try::Tiny" => "0.11"
+  },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
@@ -25,9 +29,9 @@ my %WriteMakefileArgs = (
     "Moose" => "2.0402",
     "namespace::autoclean" => "0.13"
   },
-  "VERSION" => "1.01",
+  "VERSION" => "1.02",
   "test" => {
-    "TESTS" => ""
+    "TESTS" => "t/*.t"
   }
 );
 

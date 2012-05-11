@@ -1,4 +1,7 @@
 package Net::CoverArtArchive;
+{
+  $Net::CoverArtArchive::VERSION = '1.02';
+}
 # ABSTRACT: Query the coverartarchive.org
 
 use Moose;
@@ -59,7 +62,6 @@ __PACKAGE__->meta->make_immutable;
 1;
 
 
-__END__
 =pod
 
 =encoding utf-8
@@ -91,9 +93,19 @@ represents a piece of artwork for a given release.
 
 Returns an array reference of L<Net::CoverArtArchive::CoverArt> objects.
 
-=head1 AUTHOR
+=head1 AUTHORS
+
+=over 4
+
+=item *
 
 Oliver Charles <oliver@musicbrainz.org>
+
+=item *
+
+Brian Cassidy <bricas@cpan.org>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 
@@ -103,4 +115,7 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
+
+
+__END__
 
